@@ -1,0 +1,18 @@
+h1 {
+  font-family: Menlo;
+  font-size: 20px;
+}
+
+.picka > input.picka-comp {
+  display: inline-block;
+  margin-bottom: 0.75ex;
+}
+
+.picka > input.picka-comp {
+  text-align: right;
+  width: 4em;
+}
+
+.picka > input.picka-comp.picka-comp-year {
+  width: 5em;
+}

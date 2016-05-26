@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+    <script src="app.js"></script>
+    
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="picka.css">
+  </head>
+  <body ng-controller="PickaDemoCtrl as vm">
+    <div class="container">
+      <h1>Picka</h1>
+      
+      <dl class="_dl-horizontal">
+        <dt>Start</dt>
+        <dd>
+          <picka ng-model="start" format="Y/M/D - H:M"></picka>
+        </dd>
+        <!-- <br/> -->
+        <dt>End</dt>
+        <dd><picka ng-model="end"></picka></dd>
+      </dl>
+      
+      <br/>
+      
+      <pre>
+        Start: {{start.toLocaleDateString()}}
+        End: {{end.toLocaleDateString()}}
+      </pre>
+    </div>
+  </body>
+</html>
