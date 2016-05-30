@@ -16,20 +16,19 @@
       
       <dl class="_dl-horizontal">
         <dt>Start</dt>
-        <dd>
-          <picka ng-model="start" format="D . M . Y - h : m"></picka>
-        </dd>
-        <!-- <br/> -->
+        <dd><picka ng-model="vm.start" ng-change="vm.bar()"></picka></dd>
         <dt>End</dt>
-        <dd><picka ng-model="end"></picka></dd>
+        <dd><picka ng-model="vm.end" format="%D . %M . %Y %t %c" ng-change="vm.bar()"></picka></dd>
       </dl>
       
       <br/>
       
       <pre>
-        Start: {{start.toLocaleString()}} ({{start}})
-        End: {{end.toLocaleString()}} ({{end}})
+        Start: {{vm.start.toLocaleString()}} ({{start}})
+        End: {{vm.end.toLocaleString()}} ({{end}})
       </pre>
+      
+      <toogle ng-change="vm.bar()" ng-model="vm.foo" />
     </div>
   </body>
 </html>
